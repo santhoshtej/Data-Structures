@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+int main() {
+ char str[100];
+ char key;
+ int i, len;
+ int found = 0;
+ printf("Enter a string: ");
+ scanf("%s", str);
+ printf("Enter the element to search: ");
+ scanf(" %c", &key);
+ len = strlen(str);
+ for (i = 0; i < len; i++) {
+ if (str[i] == key) {
+ found = 1;
+ break;
+ }
+ }
+ if (found) {
+ printf("%c is found at position %d in the string\n", key, i+1);
+ } else {
+ printf("%c is not found in the string\n", key);
+ }
+ return 0;
+}
